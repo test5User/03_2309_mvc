@@ -16,4 +16,11 @@ public class DbInMemory {
         return users.stream()
                 .anyMatch(it -> it.getFio().equalsIgnoreCase(fio));
     }
+
+    public static User findByFio(String fio) {
+        return users.stream()
+                .filter(it -> it.getFio().equalsIgnoreCase(fio))
+                .findFirst()
+                .orElse(null);
+    }
 }
