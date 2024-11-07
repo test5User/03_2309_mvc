@@ -26,7 +26,8 @@ public class ConditionServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        var users = service.getByConditions(req.getParameterMap());
+        //var users = service.getByConditions(req.getParameterMap());
+        var users = service.getByConditionsFomDb(req.getParameterMap());
         if (!users.isEmpty()) {
             req.setAttribute("us", users);
         } else {

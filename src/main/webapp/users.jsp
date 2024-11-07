@@ -9,7 +9,7 @@
     <c:when test="${not empty us}">
         <h1>Users:</h1>
         <c:forEach var="user" items="${us}">
-            <p>Id: ${user.id}, FIO: ${user.fio}, Email: ${user.email}</p>
+            <p>Id: ${user.id}, FIO: ${user.fio}, Age: ${user.age}, Email: ${user.email}</p>
         </c:forEach>
     </c:when>
     <c:otherwise>
